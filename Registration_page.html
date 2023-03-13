@@ -9,19 +9,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <! -- css --> 
+<! -- css --> 
     <style>
+        .reg_message{
+            margin-top: 100px;
+            align-self: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            font-size: larger;
+            font: italic;
+            text-shadow: 20px;
+        }
         .mybody{
             background-color:white;
         }
+        .myhead{
+
+            color: black;
+            font-size: x-large;
+            margin-left: 30px;
+
+        }
+        .mydiv
+        {
+          margin-left: 200px;
+          margin-right: 200px;
+          margin-top: 50px;
+          border: 1px;
+          border-style: double;
+          box-shadow: 10px;
+          scrollbar-shadow-color: antiquewhite;
+          text-shadow: 10px;
+        }
+        .myform
+        {
+            
+            background-color: rgb(228, 207, 207);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input, select {
+         margin: 5px;
+        }
 
     </style>
-
-
 </head>
+
 
 <! -- javascript starts here  --> 
 <script>
+    // Add a listener to the form submission to check if passwords are matching
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+    const password = document.querySelector('#password').value;
+    const confirmPassword = document.querySelector('#confirm-password').value;
+
+    // Check if the two passwords match
+    if (password !== confirmPassword) {
+      alert('The two passwords do not match.');
+      event.preventDefault();
+    }
+  });
+
 
 </script>
 
@@ -29,7 +81,70 @@
 
 <! -- body starts here --> 
 <body class="mybody">
-    
+
+    <h1 class="myhead"> BOOMY </h1>
+    <p class="reg_message">welcome to our website please enter yor infotmation to sign up </p>
+    <div class="mydiv">
+
+        <form class="myform">
+            
+            <input type="email" placeholder="Enter Your Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
+            <br>
+        
+            <input type="password" placeholder="Enter Your Password" id="password" name="password" minlength="8" maxlength="16" required>
+            <br>
+            
+            <input type="password" placeholder="Enter Your Password" id="confirm-password" name="confirm-password"  minlength="8" maxlength="16"  required >
+            <br>
+            <label for="phone">Phone Number:</label>
+            <div class="input-group">
+            <select id="country-code" name="country-code">
+            <option value="1">United States (+1)</option>
+            <option value="86">China (+86)</option>
+            <option value="91">India (+91)</option>
+            <option value="81">Japan (+81)</option>
+            <option value="7">Russia (+7)</option>
+            <option value="82">South Korea (+82)</option>
+            <option value="62">Indonesia (+62)</option>
+            <option value="55">Brazil (+55)</option>
+            <option value="92">Pakistan (+92)</option>
+            <option value="234">Nigeria (+234)</option>
+            <option value="880">Bangladesh (+880)</option>
+            <option value="33">France (+33)</option>
+            <option value="49">Germany (+49)</option>
+            <option value="44">United Kingdom (+44)</option>
+            <option value="39">Italy (+39)</option>
+            <option value="90">Turkey (+90)</option>
+            <option value="54">Argentina (+54)</option>
+            <option value="20">Egypt (+20)</option>
+            <option value="81">Japan (+81)</option>
+            <option value="86">China (+86)</option>
+            </select>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <input type="submit" value="signup">
+        </form>
+        <script>
+            // Add a listener to the form submission to check if passwords are matching
+        
+            document.querySelector('form').addEventListener('submit', function(event) {
+            const password = document.querySelector('#password').value;
+            const confirmPassword = document.querySelector('#confirm-password').value;
+        
+            // Check if the two passwords match
+            if (password !== confirmPassword) {
+              alert('The two passwords do not match.');
+              event.preventDefault();
+            }
+          });
+        
+        
+        </script>
+          
+    </div>
+  
+
+    </form>
 </body>
 
 
