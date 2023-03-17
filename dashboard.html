@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+  <!-- CSS HERE -->
+    <style>
+       .left-column{
+        border-style: double ;
+        border: 1px;
+        width: 20%;
+        background-color: #0f2130;
+        float: left;
+        height: 100%;
+          
+      }
+      .left-column div {
+          padding: 10px;
+          font-weight: bold;
+          font-size: 18px;
+          color: black;
+          cursor: pointer;
+          line-height: 3;
+          text-align: center;
+       }
+       .left-column div:hover {
+          font-size: 25px;
+          cursor: pointer;
+          text-align: center;
+          
+       }
+
+       .right-column{
+        border: 1px;
+        color:white !important;
+        background-color: white;
+          width: 80%;
+          float: left;
+          height:fit-content;
+          
+      }
+
+        .mybody
+        {
+            background-color: #0f2130;
+            text-align: center;
+        }
+
+    </style>
+  <!-- END OF CSS HERE -->
+
+</head>
+
+<!-- SCRIPT HERE -->
+<script>
+    class product 
+    {
+        constructor( name, description, price, image )
+        {
+            this.image=image;
+            this.name=name;
+            this.description= description;
+            this.price=price; 
+        }
+    }
+    class user
+    {
+        constructor( name, username,password, email, address,phone_number)
+        {
+            this.email=email;
+            this.name=name;
+            this.username=username;
+            this.password=password;
+            this.address=address;
+            this.phone_number=phone_number;
+        }
+    }
+     //--trying users 
+
+    let i = new user("bassem mohamed moustafa","jump","jump18","jump@gmail.com","nasr city", "01555076499");
+    let x = new user("abdelrahman mansy","mansy22","lololo","aloooo@gmail.com","rehab city", "01000076499");
+    let users=[i,x];
+    // trying product;
+    
+    let j= new product("pepsi can","pepsi can betetshereb ya m3alaem te3melak dema8 tarsh ",10,"C:\web project files\pepsi can.jpg");
+    let b= new product("real madrid t-shirt"," tshirt 3amy w 3am 3eyaly ",1500,"‪C:\web project files\real madrid tshirt.jpg");
+
+    let products=[j,b];
+
+
+    
+    
+
+
+</script>
+<!-- END OF SCRIPT  HERE -->
+
+
+<!-- BODY HERE -->
+<body class="mybody">
+<div class="left-column">
+    
+    <div>Home</div>
+    <div>Products</div>
+    <div>Account Management</div>
+    <div>Transactions</div>
+    <div>Analytics</div>
+    <div>Inventory</div>
+    <div>Sign out</div>
+      
+</div>
+<div class="right-column"> 
+    
+    <div>Hello world </div> 
+
+</div>
+    
+</body>
+
+<!-- END OF BODY  HERE -->
+
+
+</html>
