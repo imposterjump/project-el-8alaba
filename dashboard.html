@@ -10,45 +10,148 @@
 
   <!-- CSS HERE -->
     <style>
-       .left-column{
-        border-style: double ;
-        border: 1px;
-        width: 20%;
-        background-color: #0f2130;
-        float: left;
-        height: 100%;
-          
-      }
-      .left-column div {
-          padding: 10px;
-          font-weight: bold;
-          font-size: 18px;
-          color: black;
-          cursor: pointer;
-          line-height: 3;
-          text-align: center;
-       }
-       .left-column div:hover {
-          font-size: 25px;
-          cursor: pointer;
-          text-align: center;
-          
-       }
+       
 
-       .right-column{
-        border: 1px;
-        color:white !important;
-        background-color: white;
-          width: 80%;
-          float: left;
-          height:fit-content;
-          
-      }
-
-        .mybody
+      
+        
+       .mybody
         {
-            background-color: #0f2130;
-            text-align: center;
+            background-color: rgb(182, 176, 176);
+            
+}
+.dashboard {
+    display: flex;
+  justify-content: space-between ;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+       .rectangle {
+        width: 350px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        margin-left: 20x;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: larger;
+        border: 1px solid black;
+        padding: 10px;
+       
+}
+.rectangle:hover {
+       background-color: aquamarine;
+       
+       
+}
+
+.rectangle2 {
+        width: 650px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: larger;
+}
+.rectangle2:hover{
+      background-color: aquamarine;
+       
+}
+
+
+
+        
+     
+
+
+       .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          color:#0f2130;
+          background-color: white;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+         }
+
+
+         .header {
+    margin-left: 40%;
+    color: #0f2130;
+    line-height: -5;
+    
+}
+
+
+       .sidenav a {
+         padding: 8px 8px 8px 32px;
+         margin-top: 20PX;
+         text-decoration: none;
+         font-size: 25px;
+         color: #0f2130;
+         display: block;
+         transition: 0.3s;
+         text-align: left;
+        }
+
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+          font-size: 30px;
+          padding: 12px 12px 12px 12px; 
+          text-align: left;
+          background-color: aquamarine ;
+        }
+
+
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+        margin-left: 50px;
+        }
+
+
+
+        @media screen and (max-height: 450px)
+         {
+          .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+        
+        }
+        .bignumbers
+        {
+        font-size: x-large;
+        
+        }
+
+    
+        
+
+
+      
+        .inbox_text
+        {
+            font-size: larger;
         }
 
     </style>
@@ -56,8 +159,23 @@
 
 </head>
 
+
+
+
+
+
 <!-- SCRIPT HERE -->
 <script>
+
+    
+function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
     class product 
     {
         constructor( name, description, price, image )
@@ -93,32 +211,47 @@
     let products=[j,b];
 
 
-    
-    
-
-
 </script>
 <!-- END OF SCRIPT  HERE -->
 
 
 <!-- BODY HERE -->
-<body class="mybody">
-<div class="left-column">
-    
-    <div>Home</div>
-    <div>Products</div>
-    <div>Account Management</div>
-    <div>Transactions</div>
-    <div>Analytics</div>
-    <div>Inventory</div>
-    <div>Sign out</div>
-      
-</div>
-<div class="right-column"> 
-    
-    <div>Hello world </div> 
+<body class="mybody" >
 
-</div>
+   
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <li>
+            <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">HOME</a>
+            <a href="#">USERS MANAGMENT</a>
+            <a href="#">PRODUCT CONTROL</a>
+            <a href="#">ANALYSIS</a>
+            <a href="#">SIGN OUT</a>
+           
+            </div>
+        </li>
+        <h1 class="header" > welcome to the admin page  </h1>
+
+        <div class="white-box">
+            <!-- Add your content here -->
+          </div>
+          <div class="dashboard">
+            <div class="rectangle">Total Sales</div>
+            <div class="rectangle">Return on Investment (ROI)</div>
+            <div class="rectangle">Revenue</div>
+            <div class="rectangle"></div>
+            <div class="rectangle2">Number of Orders</div>
+            <div class="rectangle2">Number of Visitors Today</div>
+          </div>
+
+           
+
+    
+
+
+
     
 </body>
 
