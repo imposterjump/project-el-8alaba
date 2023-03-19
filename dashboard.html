@@ -18,9 +18,62 @@
         {
             background-color: rgb(182, 176, 176);
             
-            
-        }
+}
+.dashboard {
+    display: flex;
+  justify-content: space-between ;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+       .rectangle {
+        width: 350px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        margin-left: 20x;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: larger;
+        border: 1px solid black;
+        padding: 10px;
+       
+}
+.rectangle:hover {
+       background-color: aquamarine;
+       
+       
+}
+
+.rectangle2 {
+        width: 650px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: larger;
+}
+.rectangle2:hover{
+      background-color: aquamarine;
+       
+}
+
+
+
+        
      
 
 
@@ -31,17 +84,20 @@
           z-index: 1;
           top: 0;
           left: 0;
-          background-color: #0f2130;
+          color:#0f2130;
+          background-color: white;
           overflow-x: hidden;
           transition: 0.5s;
           padding-top: 60px;
          }
 
 
-        .header
-         {
-             margin-left: 40%;
-         }
+         .header {
+    margin-left: 40%;
+    color: #0f2130;
+    line-height: -5;
+    
+}
 
 
        .sidenav a {
@@ -49,14 +105,19 @@
          margin-top: 20PX;
          text-decoration: none;
          font-size: 25px;
-         color: #818181;
+         color: #0f2130;
          display: block;
          transition: 0.3s;
+         text-align: left;
         }
 
 
         .sidenav a:hover {
           color: #f1f1f1;
+          font-size: 30px;
+          padding: 12px 12px 12px 12px; 
+          text-align: left;
+          background-color: aquamarine ;
         }
 
 
@@ -80,35 +141,14 @@
         .bignumbers
         {
         font-size: x-large;
+        
         }
 
-
-        .grid-container {
-           
-           display: grid;
-           grid-template-columns: 1fr 1fr;
-           grid-gap: 0px;
-           column-count: 2;
-           align-items: center;
-           margin-left:10%;
-           margin-right: 10% ;
-        }
+    
+        
 
 
-      .child {
-
-          display: block;
-          text-align: center;
-          shape-outside: circle();
-          shape-margin: 20px;
-          background-color: rgba(255, 255, 255, 0.8);
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: 10px;
-          width: 50%;
-          height: fit-content;
-          margin: 10%;
-
-        }
+      
         .inbox_text
         {
             font-size: larger;
@@ -178,7 +218,7 @@ function openNav() {
 <!-- BODY HERE -->
 <body class="mybody" >
 
-
+   
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <li>
             <div id="mySidenav" class="sidenav">
@@ -192,37 +232,19 @@ function openNav() {
            
             </div>
         </li>
-        <h1 class="header" > welcome to the admin page </h1>
+        <h1 class="header" > welcome to the admin page  </h1>
 
-        <div class = "grid-container">
-
-            <div class = "child">
-
-              <p class=" inbox_text"> Today</p>
-              <p class="bignumbers"> 4500K $ <br> Revenu</p>
-              <p class="bignumbers"> 133 Orders</p>
-              
-              
-              
-            </div>
-        
-            <div class = "child">
-        
-                <img src = "C:\Users\Yahia Eissa\Desktop\TOPS.jpg">
-            </div>
-            <div class = "child">
-        
-                <img src = "C:\Users\Yahia Eissa\Desktop\BOTTOMS.jpg">
-            </div>
-        
-            <div class = "child">
-        
-                <img src = "C:\Users\Yahia Eissa\Desktop\ACCESSORIES.jpg">
-            </div>
-        
-        
-            </div>
-        
+        <div class="white-box">
+            <!-- Add your content here -->
+          </div>
+          <div class="dashboard">
+            <div class="rectangle">Total Sales</div>
+            <div class="rectangle">Return on Investment (ROI)</div>
+            <div class="rectangle">Revenue</div>
+            <div class="rectangle"></div>
+            <div class="rectangle2">Number of Orders</div>
+            <div class="rectangle2">Number of Visitors Today</div>
+          </div>
 
            
 
