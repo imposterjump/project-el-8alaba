@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <!--HEADER STARTS HERE -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+     <!--CSS STARTS HERE -->
+     <style>
+        .mybody
+        {
+            text-align: center;
+            background-color: lightgrey;
+            margin: 20px;
+            padding: 20px;
+        }
+        .user-container
+        {
+            margin-left: 25%;
+            width: 50%;
+            height: fit-content;
+            border: 2px;
+            border-style: double;
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            
+            
+        }
+        .user_infos
+        {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 20px;
+            border: 2px;
+            border-style: double;
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+            border-radius: 10px;
+            font-size: x-large;
+            
+            
+            
+            
+        }
+        .searchbar
+        {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .buttons
+        {
+            color: black;
+            background-color: rgb(34, 173, 34);
+            border-radius: 8px;
+            font-size: large;
+            
+        }
+        .buttons:hover
+        {
+            opacity: 0.7;
+            transition: 400ms;
+        }
+        .buttons:active 
+        {
+           background-color: #3e8e41;
+           box-shadow: 0 20px #666;
+            transform: translateY(10px);
+        }
+        .formcontainer
+        {
+            margin-top: 100px;
+            display: block;
+            margin-left: 25%;
+            width: 50%;
+            height: fit-content;
+            border: 2px;
+            border-style: double;
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            
+        }
+        .inputs{
+           width: 80%;
+           padding: 12px 20px;
+           margin: 8px 0;
+           display: inline-block;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+        }
+
+        .submit {
+            width: 50%;
+            margin-left: 25%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+
+          input[type=submit]:hover {
+           background-color: #45a049;
+          }
+        
+
+     </style>
+     <!--CSS ENDSHERE -->
+
+
+
+
+
+</head>
+ <!--HEADER ENDS HERE -->
+
+
+
+
+      <!--JS STARTS HERE -->
+      <script>
+          class product 
+    {
+        constructor( name, description, price, image )
+        {
+            this.image=image;
+            this.name=name;
+            this.description= description;
+            this.price=price; 
+        }
+    }
+    
+    class user
+    {
+        constructor( name, username,password, email, address,phone_number)
+        {
+            this.email=email;
+            this.name=name;
+            this.username=username;
+            this.password=password;
+            this.address=address;
+            this.phone_number=phone_number;
+        }
+    }
+     //--trying users 
+
+    let i = new user("bassem mohamed moustafa","jump","jump18","jump@gmail.com","nasr city", "01555076499");
+    let x = new user("abdelrahman mansy","mansy22","lololo","aloooo@gmail.com","rehab city", "01000076499");
+    let users=[i,x];
+    // trying product;
+    
+    let j= new product("pepsi can","pepsi can betetshereb ya m3alaem te3melak dema8 tarsh ",10,"C:\web project files\pepsi can.jpg");
+    let b= new product("real madrid t-shirt"," tshirt 3amy w 3am 3eyaly ",1500,"‪C:\web project files\real madrid tshirt.jpg");
+
+    let products=[j,b];
+
+    function generate_users_tabs(s_username)
+    {
+        console.log("i am running now ");
+        var a =new String(s_username);
+        
+        
+        
+           if(a.includes==="")
+           {
+            for( x=0;x<users.length;x++)
+            {
+                console.log(x);
+                var tag = document.createElement("div");
+                var text = document.createTextNode( "username: "+users[x].username+ " email: "+users[x].email);
+                tag.appendChild(text);
+                var element = document.getElementById("user_holder");
+                element.appendChild(tag);
+                
+            }
+           }
+           else
+           {
+            for( x=0;x<users.length;x++)
+            {
+                
+                if((users[x].username).includes(s_username))
+                {
+                    console.log(x);
+                    var tag = document.createElement("div");
+                    var text = document.createTextNode( "username: "+users[x].username+ " email: "+users[x].email);
+                    tag.appendChild(text);
+                    var element = document.getElementById("user_holder");
+                    element.appendChild(tag);
+                }
+                
+            }
+           }
+    }
+
+
+      </script>
+      <!-- JS ENDS  HERE -->
+
+
+
+
+
+<!--BODY STARTS HERE -->
+<body class="mybody">
+    
+    <script>
+       generate_users_tabs("");
+    </script>
+
+
+    <h1>welcome to management tool </h1>
+    <br>
+    <input type="text" class="searchbar" placeholder= "Search for a user with username..">
+    <div class="user-container" id="userscontainer">
+
+        
+         
+         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons"> Edit </button> <button class="buttons">Delete</button></div>
+         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons"> Edit </button> <button class="buttons">Delete</button></div>
+          
+
+    
+    </div>
+    <div class="formcontainer" >
+        <h1>To add a user pls fill the fields and then submit </h1>
+        <form class="myform">
+            
+            <input type="email" class="inputs" placeholder="Enter Your Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
+            <br>
+        
+            <input type="password" class="inputs" placeholder="Enter Your Password" id="password" name="password" minlength="8" maxlength="16" required>
+            <br>
+            
+            <input type="password" class="inputs" placeholder="Enter Your Password" id="confirm-password" name="confirm-password"  minlength="8" maxlength="16"  required >
+            <br>
+            <label class="phone_label" for="phone">Phone Number:</label>
+            <div class="input-group">
+            <select id="country-code" name="country-code">
+            <option value="1">United States (+1)</option>
+            <option value="86">China (+86)</option>
+            <option value="91">India (+91)</option>
+            <option value="81">Japan (+81)</option>
+            <option value="7">Russia (+7)</option>
+            <option value="82">South Korea (+82)</option>
+            <option value="62">Indonesia (+62)</option>
+            <option value="55">Brazil (+55)</option>
+            <option value="92">Pakistan (+92)</option>
+            <option value="234">Nigeria (+234)</option>
+            <option value="880">Bangladesh (+880)</option>
+            <option value="33">France (+33)</option>
+            <option value="49">Germany (+49)</option>
+            <option value="44">United Kingdom (+44)</option>
+            <option value="39">Italy (+39)</option>
+            <option value="90">Turkey (+90)</option>
+            <option value="54">Argentina (+54)</option>
+            <option value="20">Egypt (+20)</option>
+            <option value="81">Japan (+81)</option>
+            <option value="86">China (+86)</option>
+            </select>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <br>
+            <label>
+            <input type="checkbox" class="check" name="agree" required> I agree to the Website's terms and licenses </label>
+            <br>  
+            <input type="submit" class="submit" value="ADD USER ">
+        </form>
+    </div>
+
+
+</body>
+<!--BODY ENDS HERE -->
+</html>
