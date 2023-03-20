@@ -24,7 +24,7 @@
         {
             margin-left: 25%;
             width: 50%;
-            height: fit-content;
+            height: max-content;
             border: 2px;
             border-style: double;
             display: block;
@@ -41,6 +41,7 @@
             padding: 20px;
             border: 2px;
             border-style: double;
+            border-color: white;
             width: 80%;
             margin-left: 10%;
             margin-right: 10%;
@@ -64,9 +65,13 @@
         .buttons
         {
             color: black;
-            background-color: rgb(34, 173, 34);
+            background-color: rgb(64, 199, 64);
             border-radius: 8px;
             font-size: large;
+            border-style: none;
+            margin: 10px;
+            padding: 3px;
+
             
         }
         .buttons:hover
@@ -126,12 +131,8 @@
      <!--CSS ENDSHERE -->
 
 
-
-
-
-</head>
- <!--HEADER ENDS HERE -->
-
+     
+    
 
 
 
@@ -184,11 +185,13 @@
             for( x=0;x<users.length;x++)
             {
                 console.log(x);
-                var tag = document.createElement("div");
-                var text = document.createTextNode( "username: "+users[x].username+ " email: "+users[x].email);
+                const tag = document.createElement("div");
+                const text = document.createTextNode( "username: "+users[x].username+ "       email: "+users[x].email);
                 tag.appendChild(text);
-                var element = document.getElementById("user_holder");
-                element.appendChild(tag);
+                tag.classList="user_infos";
+                var anyname = document.getElementById("userscontainer");
+
+                anyname.appendChild(tag);
                 
             }
            }
@@ -200,20 +203,50 @@
                 if((users[x].username).includes(s_username))
                 {
                     console.log(x);
-                    var tag = document.createElement("div");
-                    var text = document.createTextNode( "username: "+users[x].username+ " email: "+users[x].email);
-                    tag.appendChild(text);
-                    var element = document.getElementById("user_holder");
-                    element.appendChild(tag);
+
+                    const new_div = document.createElement("div");
+                    const div_text = document.createTextNode( "username: "+users[x].username+ "                 email: "+users[x].email);
+                    new_div.appendChild(div_text);
+                    var all_users = document.getElementById("userscontainer");
+                    var buttonEl = document.createElement("button");
+	                var buttonTextEl = document.createElement("a");
+	                buttonEl.className = "buttons";
+	                buttonTextEl.innerText = " Edit ";
+	                buttonEl.appendChild(buttonTextEl);
+                    buttonEl.onclick= edit_infos();
+                    new_div.appendChild( buttonEl);
+
+                    var buttonE2 = document.createElement("button");
+	                var buttonTextE2 = document.createElement("a");
+	                buttonE2.className = "buttons";
+	                buttonTextE2.innerText = " Delete ";
+	                buttonE2.appendChild(buttonTextE2);
+                    buttonE2.onclick= edit_infos();
+                    new_div.appendChild( buttonE2);
+
+                    new_div.classList="user_infos";
+                    
+                    
+                    all_users.appendChild(new_div);
                 }
                 
             }
            }
     }
 
+    function edit_infos()
+    {
+        console.log("i am here");
+    }
+
 
       </script>
       <!-- JS ENDS  HERE -->
+
+    </head>
+    <!--HEADER ENDS HERE -->
+
+   
 
 
 
@@ -222,9 +255,7 @@
 <!--BODY STARTS HERE -->
 <body class="mybody">
     
-    <script>
-       generate_users_tabs("");
-    </script>
+    
 
 
     <h1>welcome to management tool </h1>
@@ -234,8 +265,8 @@
 
         
          
-         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons"> Edit </button> <button class="buttons">Delete</button></div>
-         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons"> Edit </button> <button class="buttons">Delete</button></div>
+         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons" onclick="edit_infos()"> Edit </button> <button class="buttons">Delete</button></div>
+         <div class="user_infos"> username: jump   email: ayoubbassem18@gmail.com <button class="buttons" onclick="edit_infos()"> Edit </button> <button class="buttons">Delete</button></div>
           
 
     
@@ -250,7 +281,7 @@
             <input type="password" class="inputs" placeholder="Enter Your Password" id="password" name="password" minlength="8" maxlength="16" required>
             <br>
             
-            <input type="password" class="inputs" placeholder="Enter Your Password" id="confirm-password" name="confirm-password"  minlength="8" maxlength="16"  required >
+            <input type="password" class="inputs" placeholder="confirm Your Password" id="confirm-password" name="confirm-password"  minlength="8" maxlength="16"  required >
             <br>
             <label class="phone_label" for="phone">Phone Number:</label>
             <div class="input-group">
@@ -285,6 +316,27 @@
             <input type="submit" class="submit" value="ADD USER ">
         </form>
     </div>
+
+    <script>
+
+        generate_users_tabs("");
+        
+            // Add a listener to the form submission to check if passwords are matching
+        
+            document.querySelector('form').addEventListener('submit', function(event) {
+            const password = document.querySelector('#password').value;
+            const confirmPassword = document.querySelector('#confirm-password').value;
+        
+            // Check if the two passwords match
+            if (password !== confirmPassword) {
+              alert('The two passwords do not match.');
+              event.preventDefault();
+            }
+          });
+        
+        
+        
+     </script>
 
 
 </body>
