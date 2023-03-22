@@ -5,134 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="omarstyle.css">
+    <title>Booys Bottoms</title>
 </head>
-<style>
-    .container{
-        max-width: 1300px;
-        margin: auto;
-        padding-left: 25px;
-        padding-right: 15px;
-        display: grid;
-        text-align: center;
-        column-span: 3;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .row{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .column{
-        flex-basis:30%;
-        min-width: 350px;
-        margin-bottom: 30px;
-        
-    }
-    .text{
-        text-align: left;
-    }
-    .column img{
-        width: 100%;
-        height: 100%;
-    }
-    .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #0f2130;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0f2130;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  opacity: 85%;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.logo img
-  {
-   position:absolute;
-   margin-top: 10px;
-   margin-left: 70px;
-  }
-
-.span
-{
-  margin-top: 15px;
-  margin-left: 15px;
-}
-.before{
-    font-weight: lighter;
-    text-decoration:line-through ;
-}
-.after{
-    color:darkred;
-}
-.line{
-    color: black;
-}
-.types{
-    background-color: #f7e7ce;
-    float: center;
-    color: black;
-}
-</style>
 <body>
     <ul>
         <div class="logo"><a href="#"><img src = "C:\Users\Yahia Eissa\Desktop\LOGOIHF.png"></a></div>
@@ -154,17 +29,20 @@ li a:hover {
           <li><a href="#help">Help</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
-          
-        </ul>
+          </ul>
+   <div class="centerednav">    
         <ul class="types">
-        <li><a href="Bottoms.html">Bottoms</a></li>
-        <li><a href="Tops.html">Tops</a></li>
-        <li><a href="Jackets.html">Jackets</a></li>
-        <li><a href="Accessories.html">Accessories</a></li>
+        <li class="types2"><a href="bottom2.html">Bottoms</a></li>
+        <li class="types2"><a href="Tops.html">Tops</a></li>
+        <li class="types2"><a href="Jackets.html">Jackets</a></li>
+        <li class="types2"><a href="Accessories.html">Accessories</a></li>
     </ul>
-    <hr class="line">
+  </div>
+    <hr>
          
     <div class="container">
+     
+
 
     <div class="text">
           <p>Category</p>
@@ -173,15 +51,21 @@ li a:hover {
              <div class = "row">
                 <div class = "column">
                     <div>
-                          <img src="C:\Users\Home\Desktop\Bottoms Images\Ripped Jeans1.avif">
+                          <div class="images"> 
+                          <img src="C:\Users\Home\Desktop\Bottoms Images\Ripped Jeans1.avif" href="Ripped.html">
+                          <img class="imgtop" src="C:\Users\Home\Desktop\Bottoms Images\Ripped Jeans2.avif">
+                          </div>
                           <div class="text">
                           <h4>Ripped Medium Wash Slim Jeans</h4>
-                          <h5 class = "before">EGP 1200.00</h5><h5 class="after">EGP 870.00</h5> </div>
+                          <h5 class = "before">EGP 1200.00</h5> <span><h5 class="after">EGP 870.00</h5> </span> </div>
                    </div>    
                   </div>
              <div class="column"> 
                 <div>
+                <div class="images">
                  <img src="C:\Users\Home\Desktop\Bottoms Images\Ligh Wash Jeans1.avif">
+                 <img src="C:\Users\Home\Desktop\Bottoms Images\Light Wash Jeans2.webp" class="imgtop">
+                </div>
                  <div class="text">
                  <h4>Light Wash Straight Jeans</h4>                             
                  <h5 class="before">EGP 1100.00 </h5> <h5 class="after">EGP 700.00</h5> </div>
@@ -190,7 +74,10 @@ li a:hover {
             </div>
             <div class="column">
                 <div>
+                  <div class="images">
                     <img src="C:\Users\Home\Desktop\Bottoms Images\Dark Wash Jeans1.avif">
+                    <img class="imgtop" src="C:\Users\Home\Desktop\Bottoms Images\Dark Wash Jeans2.avif">
+                  </div>
                     <div class="text">
                     <h4>Dark Wash Slim Jeans</h4>
                     <h5 class="before">EGP 1050.00 </h5> <h5 class="after">EGP 680.00</h5> </div>
@@ -200,8 +87,11 @@ li a:hover {
         </div>
          <div class="row"> 
             <div class="column">
-                <div>
+              <div>
+                <div class="images"> 
                     <img src="C:\Users\Home\Desktop\Bottoms Images\Grey Cargo1.avif">
+                    <img class="imgtop" src="C:\Users\Home\Desktop\Bottoms Images\Grey Cargo2.avif">
+                  </div>
                     <div class="text">
                     <h4>Grey Cargo Pants</h4>
                     <h5 class="before">EGP 1250.00 </h5> <h5 class="after">EGP 850.00</h5> </div>
@@ -209,7 +99,10 @@ li a:hover {
             </div>
             <div class = "column">
                 <div>
+                  <div class="images">
                    <img src="C:\Users\Home\Desktop\Bottoms Images\Baige Cargo1.webp">
+                   <img class="imgtop" src="C:\Users\Home\Desktop\Bottoms Images\Baige Cargo 2.avif">
+                  </div>
                    <div class="text">
                       <h4>Baige Cargo Pants</h4>
                       <h5 class = "before">EGP 1250.00 </h5> <h5 class="after">EGP 850.00</h5> </div>
@@ -217,7 +110,10 @@ li a:hover {
               </div>
               <div class="column">
                 <div>
+                  <div class="images">
                     <img src="C:\Users\Home\Desktop\Bottoms Images\Black Cargo1.avif">
+                    <img class="imgtop" src="C:\Users\Home\Desktop\Bottoms Images\Black Cargo2.webp">
+                  </div>
                     <div class="text">
                     <h4>Black Cargo Pants</h4>
                     <h5 class="before">EGP 1250.00 </h5> <h5 class="after">EGP 850.00</h5> </div>
