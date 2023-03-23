@@ -8,173 +8,10 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./HomePageStyle.css" rel="stylesheet"/>
+
 </head>
-<style>
-.mySlides{
-    display:none;
-}
-
-html,body{
-  margin: 0;
-}
-
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #0f2130;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0px;
-    column-count: 2;
-    align-items: center;
-    margin-left:10%;
-}
-
-.child {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  font-size: 30px;
-  width: 500px;
-  height:500px;
-  text-align: center;
-  margin: 10%;
-}
-
-.Contact-Container
-{
-  align-items: center;
-}
-
-.Contact1
-{
-  float:left;
-  width: 33%;
-  height: 200px;
-  
-  
-  
-}
-
-.Contact2
-{
-  float: left;
-  width: 33%;
-  align-content: center;
-}
-
-.Contact3
-{
-  float: right;
-  width: 33%;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0f2130;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  opacity: 85%;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.logo img
-  {
-   position:absolute;
-   margin-top: 10px;
-   margin-left: 70px;
-  }
-
-.span
-{
-  margin-top: 15px;
-  margin-left: 15px;
-}
-</style>
-<script>
-let myIndex = 0;
-    function slides()
-    {
-        let images = document.getElementsByClassName("mySlides");
-        for(let i = 0; i < images.length;i++){
-            images[i].style.display = "none";
-        }
-        if (myIndex > images.length-1){
-            myIndex = 0;
-        }
-        images[myIndex].style.display = "block";
-        myIndex++;
-        setTimeout(slides,4000);
-    }
-
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-
-</script>
+<script src="HomePageScript.js"></script>
 <body>
     
     <ul>
@@ -190,10 +27,23 @@ let myIndex = 0;
             <a href="#">Wishlist</a>
           
         </li>
+        <li><i style="margin-right: 15px;;font-size: 28px;" class="material-icons accountIcon" onclick="openAccount()">&#xe853;</i>
+          <li>
+            <div id="myAccountNav" class="Accountnav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeAccount()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Cart</a>
+            <a href="#">Wishlist</a>
+          
+        </li>
+        
+        </li>
+        
         
         
         <li><a href="#cart"><i class="material-icons">&#xe854;</i></a></li>
-        <li><a href="#account"><i class="material-icons">&#xe853;</i></a></li>
+       
         <li><a href="#help">Help</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#about">About</a></li>
@@ -211,7 +61,7 @@ let myIndex = 0;
     <div class = "grid-container">
     
     <div class = "child">
-        <a href="Jacket.html"><img src = "C:\Users\Yahia Eissa\Desktop\JACKETS.jpg"></a>
+        <a href="Jackets.html"><img src = "C:\Users\Yahia Eissa\Desktop\JACKETS.jpg"></a>
     </div>
     
     <div class = "child">
