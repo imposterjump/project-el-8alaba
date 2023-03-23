@@ -29,6 +29,7 @@
     margin-left:5px;
   }
 .dashboard {
+  
     display: flex;
   justify-content: space-between ;
   margin-top: 20px;
@@ -108,10 +109,11 @@
           top: 0;
           left: 0;
           color:#0f2130;
-          background-color: white;
+          background-color: #0f2130;
           overflow-x: hidden;
           transition: 0.5s;
           padding-top: 60px;
+          opacity: 90%;
          }
 
 
@@ -121,12 +123,15 @@
        .sidenav a {
          padding: 8px 8px 8px 32px;
          margin-top: 20PX;
+         
          text-decoration: none;
          font-size: 25px;
-         color: #0f2130;
+         color: white;
          display: block;
          transition: 0.3s;
          text-align: left;
+
+         
         }
 
 
@@ -169,6 +174,18 @@
             font-size: larger;
         }
 
+       
+
+  
+
+  .logo img
+    {
+     position:absolute;
+     margin-top: -53px;
+     margin-left: 70px;
+     
+    }
+    
     </style>
   <!-- END OF CSS HERE -->
 
@@ -233,6 +250,10 @@ function openNav() {
 
    
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <ul>
+      <div class="logo"><a href="#"><img src = "C:\Users\abdow\Downloads\LogoIHF.png"></a></div>
+      
+  </ul>
         <li>
             <div id="mySidenav" class="sidenav">
             
@@ -245,9 +266,7 @@ function openNav() {
            
             </div>
         </li>
-       
 
-        
           <div class="dashboard">
            <span class="rectangle"><h3>Total Sales</h3>
           <p>989 Items </p> <span class="green-arrow">&#x25B2;</span> +4 Items </span>  
@@ -257,7 +276,7 @@ function openNav() {
               <p>14228 $  </p> <span class="green-arrow">&#x25B2;</span> +63 $ </span>
               <span class="rectangle"><h3>Number of Visitors Today</h3>
                 <p>36 </p> </span>
-                <span class="rectangle2"><h3>Top Selling Products</h3>
+                <span class="rectangle"><h3>Top Selling Products</h3>
                   <span> <span class="green-arrow">&#x25B2;</span> +7 <p=style  font-size="20">Product A </p>
 
                     <span class="green-arrow">&#x25B2;</span> +6 <p=style font-size="20">Product B</p>
