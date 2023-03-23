@@ -18,7 +18,11 @@
     flex-basis:30%;
     min-width: 350px;
     margin-bottom: 30px;
-    
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
 }
 .text{
     text-align: left;
@@ -144,9 +148,12 @@ display: none;
 position: absolute;
 top: 0;
 left: 0;
+opacity: 0;
+transition: opacity 1s ease-out;
 }
 .images:hover .imgtop{
 display: inline;
+opacity: 1;
 }
 .centerednav{
 float: none;
