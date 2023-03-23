@@ -148,12 +148,9 @@ display: none;
 position: absolute;
 top: 0;
 left: 0;
-opacity: 0;
-transition: opacity 1s ease-out;
 }
 .images:hover .imgtop{
 display: inline;
-opacity: 1;
 }
 .centerednav{
 float: none;
