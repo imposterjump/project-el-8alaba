@@ -2,134 +2,50 @@
 <html lang="en">
 
 
-<! -- head and css start here --> 
+<! -- head and css start here -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg.css">
+
     <title>Document</title>
 
-<! -- css --> 
-    <style >
-        .email
-        {
-            margin-top: 20px;
-        }
-        .submit
-        {
-            margin-bottom: 20px;
-        }
-        
+    <! -- css -->
 
-        .reg_message{
-            margin-top: 100px;
-            align-self: center;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            font-size:x-large;
-            font-style: italic;
-            text-shadow: 20px;
-        }
-        .phone_label
-        {
-            margin-bottom: 10px;
-            font-size: larger;
-            font-style: italic;
-        }
-        .check
-        {
-            font-size: larger;
-        }
-        input,select{
-            
-          
-             size: 25%;
-             font-size: large;
-             border: 1px;
-             border-style: double;
-             border-color: rgb(24, 24, 121);
-        }
-        .mybody{
-            background-color:white;
-           
-        }
-        .myhead{
-
-            color: black;
-            font-size: x-large;
-            margin-left: 30px;
-
-        }
-        .mydiv
-        {
-          
-          margin-left: 20%;
-          margin-right:20%;
-          margin-top:30px;
-          border: 1px;
-          border-style: double;
-          border-color: rgb(24, 24, 121);
-          box-shadow: 10px;
-          scrollbar-shadow-color: antiquewhite;
-          text-shadow: 10px;
-        }
-        .myform
-        {
-            width: auto;
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           
-        }
-
-        
-
-    </style>
 </head>
+<script src="reg.js"></script>
 
 
-<! -- javascript starts here  --> 
-<script>
-    // Add a listener to the form submission to check if passwords are matching
-
-    document.querySelector('form').addEventListener('submit', function(event) {
-    const password = document.querySelector('#password').value;
-    const confirmPassword = document.querySelector('#confirm-password').value;
-
-    // Check if the two passwords match
-    if (password !== confirmPassword) {
-      alert('The two passwords do not match.');
-      event.preventDefault();
-    }
-  });
-
-
-</script>
+<! -- javascript starts here  -->
 
 
 
-<! -- BODY STRATS HERE  --> 
-<body class="mybody" >
 
-    <h1 class="myhead"> BOOMY </h1>
+<! -- BODY STRATS HERE  -->
+
+<body class="mybody">
+
+
     <p class="reg_message">welcome to our website please enter yor infotmation to sign up </p>
+
     <div class="mydiv">
 
         <form class="myform">
-            
-            <input type="email" class="email" placeholder="Enter Your Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
+
+            <input type="text" placeholder="enter username " class="inputs" minlength="8" maxlength="16" required>
+            <input type="email" class="inputs" placeholder="Enter Your Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required>
             <br>
-        
-            <input type="password" class="password" placeholder="Enter Your Password" id="password" name="password" minlength="8" maxlength="16" required>
+
+            <input type="password" class="inputs" placeholder="Enter Your Password" id="password" name="password" minlength="8" maxlength="16" required>
             <br>
-            
-            <input type="password" class="confirm" placeholder="Enter Your Password" id="confirm-password" name="confirm-password"  minlength="8" maxlength="16"  required >
+
+            <input type="password" class="inputs" placeholder="cinfirm password" id="confirm-password" name="confirm-password" minlength="8" maxlength="16" required>
             <br>
             <label class="phone_label" for="phone">Phone Number:</label>
             <div class="input-group">
-            <select id="country-code" name="country-code">
+                <select id="country-code" name="country-code">
             <option value="1">United States (+1)</option>
             <option value="86">China (+86)</option>
             <option value="91">India (+91)</option>
@@ -151,33 +67,31 @@
             <option value="81">Japan (+81)</option>
             <option value="86">China (+86)</option>
             </select>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
             </div>
             <br>
             <label>
             <input type="checkbox" class="check" name="agree" required> I agree to the Website's terms and licenses </label>
-            <br>  
+            <br>
             <input type="submit" class="submit" value="signup">
         </form>
         <script>
             // Add a listener to the form submission to check if passwords are matching
-        
+
             document.querySelector('form').addEventListener('submit', function(event) {
-            const password = document.querySelector('#password').value;
-            const confirmPassword = document.querySelector('#confirm-password').value;
-        
-            // Check if the two passwords match
-            if (password !== confirmPassword) {
-              alert('The two passwords do not match.');
-              event.preventDefault();
-            }
-          });
-        
-        
+                const password = document.querySelector('#password').value;
+                const confirmPassword = document.querySelector('#confirm-password').value;
+
+                // Check if the two passwords match
+                if (password !== confirmPassword) {
+                    alert('The two passwords do not match.');
+                    event.preventDefault();
+                }
+            });
         </script>
-          
+
     </div>
-  
+
 
     </form>
 </body>
