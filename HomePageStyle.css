@@ -46,46 +46,6 @@ html,body{
   .sidenav a {font-size: 18px;}
 }
 
-.Accountnav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #0f2130;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.Accountnav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.Accountnav a:hover {
-  color: #f1f1f1;
-}
-
-.Accountnav .closeAccountbtn {
-  position: absolute;
-  top: 0;
-  left: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .Accountnav {padding-top: 15px;}
-  .Accountnav a {font-size: 18px;}
-}
-
-
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,13 +130,3 @@ li a:hover {
    margin-top: 10px;
    margin-left: 70px;
   }
-
-.accountIcon{
-    color: aliceblue !important;
-    margin-top: 10px;
-}
-
-.accountIcon:hover{
-    cursor: pointer;
-    
-}
