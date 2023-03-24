@@ -2,11 +2,14 @@
     <!DOCTYPE html>
     <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics</title>
  <style>
+
+    
  .mybody
         {
           background-color: #f7e7ce;
@@ -25,10 +28,22 @@
           padding-top: 60px;
           opacity: 90%;
          }
-
-
-
-
+         .chart-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
+.chart-container2 {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
 
        .sidenav a {
          padding: 8px 8px 8px 32px;
@@ -87,20 +102,17 @@
     }
     
     </style>
-  <script>
-function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-  </script>
+  
  </head>
 <body>
     <body class="mybody" >
 
-   
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="chart-container2">
+            <canvas id="myChart2"></canvas>
+        </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <ul>
           <div class="logo"><a href="#"><img src = "C:\Users\abdow\Downloads\LogoIHF.png"></a></div>
@@ -118,5 +130,99 @@ function openNav() {
                
                 </div>
             </li>
+
+            <!-- Javaa -->
+
+            <script>
+                function openNav() {
+                        document.getElementById("mySidenav").style.width = "250px";
+                      }
+                
+                      function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                      }
+                
+                      var ctx = document.getElementById('myChart').getContext('2d');
+                      var ctx2 = document.getElementById('myChart2').getContext('2d');
+
+                    
+var myChart2 = new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Number Of users created',
+      data: [30, 70, 63, 90, 120, 160, 140],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(255, 99, 132, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(255, 99, 132, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+
+                var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                      label: 'Number Of visitors',
+                      data: [310, 530, 510, 650, 700, 900, 760],
+                      backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                      ],
+                      borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 1)'
+                      ],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                          beginAtZero: true
+                        }
+                      }]
+                    }
+                  }
+                });
+                  </script>
 </body>
 </html>
