@@ -1,0 +1,143 @@
+<style>
+
+    
+ .mybody
+        {
+          background-color: #f7e7ce;
+        }
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          color:#0f2130;
+          background-color: #0f2130;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          opacity: 90%;
+         }
+         .chart-container {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
+.chart-container2 {
+  position: absolute;
+  top: 70%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 80%;
+}
+.chart-container3 {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+}
+.rectangle {
+        width: 250px; 
+        height: 240px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        margin-right: 0px;
+        margin-left: 580px;
+       
+        text-align: center;
+        font-size: larger;
+        
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        
+}
+.rectangle2 {
+        width: 250px; 
+        height: 240px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-top: 60px;
+        margin-right: 0px;
+        margin-left: 580px;
+       
+        text-align: center;
+        font-size: larger;
+        
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        
+}
+
+.green-arrow {
+    color: green;
+    margin-left: 5px;
+  }
+  .red-arrow{
+    color: red;
+    margin-left:5px;
+  }
+
+
+       .sidenav a {
+         padding: 8px 8px 8px 32px;
+         margin-top: 20PX;
+         
+         text-decoration: none;
+         font-size: 25px;
+         color: white;
+         display: block;
+         transition: 0.3s;
+         text-align: left;
+
+         
+        }
+
+
+        .sidenav a:hover {
+          color: #f7e7ce;;
+          font-size: 30px;
+          padding: 12px 12px 12px 12px; 
+          text-align: left;
+          background-color: white ;
+        }
+        
+
+
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+        margin-left: 50px;
+        }
+
+
+
+        @media screen and (max-height: 450px)
+         {
+          .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+        
+        }
+        
+
+  .logo img
+    {
+     position:absolute;
+     margin-top: -53px;
+     margin-left: 70px;
+     
+    }
+    
+    </style>
