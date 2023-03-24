@@ -39,11 +39,63 @@
 .chart-container2 {
   position: absolute;
   top: 70%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 80%;
+}
+.chart-container3 {
+  position: absolute;
+  top: 70%;
   left: 20%;
   transform: translate(-50%, -50%);
   width: 30%;
   height: 30%;
 }
+.rectangle {
+        width: 250px; 
+        height: 240px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        margin-right: 0px;
+        margin-left: 580px;
+       
+        text-align: center;
+        font-size: larger;
+        
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        
+}
+.rectangle2 {
+        width: 250px; 
+        height: 240px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-top: 60px;
+        margin-right: 0px;
+        margin-left: 580px;
+       
+        text-align: center;
+        font-size: larger;
+        
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        
+}
+
+.green-arrow {
+    color: green;
+    margin-left: 5px;
+  }
+  .red-arrow{
+    color: red;
+    margin-left:5px;
+  }
+
 
        .sidenav a {
          padding: 8px 8px 8px 32px;
@@ -87,11 +139,7 @@
               .sidenav a {font-size: 18px;}
         
         }
-
-
-       
-
-  
+        
 
   .logo img
     {
@@ -107,12 +155,16 @@
 <body>
     <body class="mybody" >
 
+     
+
         <div class="chart-container">
             <canvas id="myChart"></canvas>
         </div>
         <div class="chart-container2">
             <canvas id="myChart2"></canvas>
         </div>
+       
+      </div>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <ul>
           <div class="logo"><a href="#"><img src = "C:\Users\abdow\Downloads\LogoIHF.png"></a></div>
@@ -131,6 +183,14 @@
                 </div>
             </li>
 
+            <div class="rectangle"><h3>Orders to be fulfilled</h3>
+              <p>12</p> <span class="green-arrow">&#x25B2;</span> +4 Orders  </div>  
+
+              <div class="rectangle2"><h3>Average Order Value</h3>
+                <p>24 $ </p> <span class="green-arrow">&#x25B2;</span> +2 $ </div> 
+
+                <div class="chart-container3">
+                  <canvas id="myChart3"></canvas>
             <!-- Javaa -->
 
             <script>
@@ -144,7 +204,7 @@
                 
                       var ctx = document.getElementById('myChart').getContext('2d');
                       var ctx2 = document.getElementById('myChart2').getContext('2d');
-
+                     var ctx3 =document.getElementById("myChart3").getContext('2d');
                     
 var myChart2 = new Chart(ctx2, {
   type: 'bar',
@@ -185,9 +245,9 @@ var myChart2 = new Chart(ctx2, {
   }
 });
 
-                var myChart = new Chart(ctx, {
-                  type: 'bar',
-                  data: {
+   var myChart = new Chart(ctx, {
+   type: 'bar',
+   data: {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
                       label: 'Number Of visitors',
@@ -202,13 +262,13 @@ var myChart2 = new Chart(ctx2, {
                         'rgba(255, 99, 132, 0.2)'
                       ],
                       borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 99, 132, 1)'
+             'rgba(255, 99, 132, 1)',
+             'rgba(54, 162, 235, 1)',
+             'rgba(255, 206, 86, 1)',
+             'rgba(75, 192, 192, 1)',
+             'rgba(153, 102, 255, 1)',
+             'rgba(255, 159, 64, 1)',
+             'rgba(255, 99, 132, 1)'
                       ],
                       borderWidth: 1
                     }]
@@ -223,6 +283,48 @@ var myChart2 = new Chart(ctx2, {
                     }
                   }
                 });
-                  </script>
+
+
+                var myChart3 = new Chart(ctx3, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Number of Fulfilled orders',
+      data: [30, 70, 63, 90, 120, 160, 210],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(255, 99, 132, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(255, 99, 132, 1)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+
+
+  </script>
 </body>
 </html>

@@ -1,0 +1,167 @@
+<style>
+       
+
+      
+        
+       .mybody
+        {
+          background-color: #f7e7ce;
+                 
+}
+.green-arrow {
+    color: green;
+    margin-left: 5px;
+  }
+  .red-arrow{
+    color: red;
+    margin-left:5px;
+  }
+.dashboard {
+  
+    display: flex;
+  justify-content: space-between ;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+       .rectangle {
+        width: 350px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 30px;
+        margin-right: 10px;
+        margin-left: 0px;
+        align-items: center;
+        text-align: center;
+        font-size: larger;
+        
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+        align-items: flex-start;
+}
+.rectangle h3{
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.rectangle2 h3{
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.rectangle p{
+  margin-top: 2cm;
+  text-align: center;
+  font-size: 45px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*.rectangle:hover {
+       background-color: aquamarine;
+      
+       
+}*/   
+
+.rectangle2 { 
+        align-items: flex-start;
+        width: 350px; 
+        height: 280px;
+        background-color: white;
+        border: 1px solid #ccc;
+        margin-bottom: 30px;
+        margin-right: 10px;
+        margin-left: 0px;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px;
+        font-size: larger;
+}
+
+/*.rectangle2:hover{
+      background-color:aquamarine;
+       
+}*/
+
+
+
+        
+     
+
+
+       .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          color:#0f2130;
+          background-color: #0f2130;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          opacity: 90%;
+         }
+
+
+
+
+
+       .sidenav a {
+         padding: 8px 8px 8px 32px;
+         margin-top: 20PX;
+         
+         text-decoration: none;
+         font-size: 25px;
+         color: white;
+         display: block;
+         transition: 0.3s;
+         text-align: left;
+
+         
+        }
+
+
+        .sidenav a:hover {
+          color: #f7e7ce;;
+          font-size: 30px;
+          padding: 12px 12px 12px 12px; 
+          text-align: left;
+          background-color: white ;
+        }
+        
+
+
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+        margin-left: 50px;
+        }
+
+
+
+        @media screen and (max-height: 450px)
+         {
+          .sidenav {padding-top: 15px;}
+              .sidenav a {font-size: 18px;}
+        
+        }
+
+
+       
+
+  
+
+  .logo img
+    {
+     position:absolute;
+     margin-top: -53px;
+     margin-left: 70px;
+     
+    }
+    
+    </style>
