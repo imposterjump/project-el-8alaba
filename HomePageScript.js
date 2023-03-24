@@ -20,11 +20,3 @@ let myIndex = 0;
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
-
-      function openAccount() {
-        document.getElementById("myAccountnav").style.width = "250px";
-      }
-      
-      function closeAccount() {
-        document.getElementById("myAccountnav").style.width = "0";
-      }

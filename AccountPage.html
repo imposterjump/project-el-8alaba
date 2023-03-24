@@ -8,124 +8,118 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="AccountPageStyle.css" rel="stylesheet"/>
 </head>
-
-<style>
-
-html,body{
-  margin: 0;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #0f2130;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0f2130;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  opacity: 85%;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.logo img
-  {
-   position:absolute;
-   margin-top: 10px;
-   margin-left: 70px;
-  }
-
-</style>
-
-<script>
-
-function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-      }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-      }
-
-</script>
+<script src="AccountPageScript.js"></script>
 <body>
     
     <ul>
         <div class="logo"><a href="#"><img src = "C:\Users\Yahia Eissa\Desktop\LOGOIHF.png"></a></div>
-        <span style="margin-left:15px;font-size:40px;cursor:pointer" onclick="openNav()">&#9776; </span>
-        
-          <li>
-              <div id="mySidenav" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="#">Home</a>
-              <a href="#">Categories</a>
-          </li>
-          
-          
-          <li><a href="#cart"><i class="material-icons">&#xe854;</i></a></li>
+        <span style="margin-left:15px;font-size:40px;cursor:pointer;color:white;" onclick="openNav()">&#9776; </span>
+      
+        <li>
+            <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Cart</a>
+            <a href="#">Wishlist</a>
+        </li>
           <li><a href="#account"><i class="material-icons">&#xe853;</i></a></li>
+          <li><a href="#cart"><i class="material-icons">&#xe854;</i></a></li>
           <li><a href="#help">Help</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#about">About</a></li>
           
-        </ul>
+    </ul>
+
+    <div class="sidenav">
+      <a href="#about">Account Settings</a>
+
+
+    </div>
+    <div class="main">
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="FormTitle">
+        <h3>MY INFO</h3>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" value="Yahia">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" value="Eissa">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Birthday (Optional)</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="birthday" name="birthday">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Email and Password">Email and Password</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="eml" name="email" value="yahia1572003@gmail.com">
+          <br>
+          <input type="password" id="pword" name="password" placeholder="Change Password">
+          <br>
+          <input type="tel" id="num" name="number" placeholder="Phone number">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <input type="submit" value="Update">
+      </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <form action="/action_page.php">
+      <div class="FormTitle">
+        <h3>CHECKOUT INFO</h3>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-25">
+          <label for="Saddress">Shipping Address</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Sadress" name="ShippingAddress" placeholder="Select Address">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Pmethod">Payment Method</label>
+        </div>
+        <div class="col-75">
+          <select id="Pmethod" name="PaymentMethod">
+            <option value="Cash">Cash</option>
+            <option value="Visa/MasterCard">Visa/MasterCard</option>
+            <option value="GiftCard">GiftCard</option>
+          </select>
+        </div>
+      <div class="row">
+        <input type="submit" value="Save">
+      </div>
+      </form>
+    </div>
+  </div>
+    
 
 </body>
 </html>
