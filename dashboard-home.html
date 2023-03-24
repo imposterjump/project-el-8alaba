@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
 
 
   <!-- CSS HERE -->
@@ -29,6 +29,7 @@
     margin-left:5px;
   }
 .dashboard {
+  
     display: flex;
   justify-content: space-between ;
   margin-top: 20px;
@@ -108,10 +109,11 @@
           top: 0;
           left: 0;
           color:#0f2130;
-          background-color: white;
+          background-color: #0f2130;
           overflow-x: hidden;
           transition: 0.5s;
           padding-top: 60px;
+          opacity: 90%;
          }
 
 
@@ -121,12 +123,15 @@
        .sidenav a {
          padding: 8px 8px 8px 32px;
          margin-top: 20PX;
+         
          text-decoration: none;
          font-size: 25px;
-         color: #0f2130;
+         color: white;
          display: block;
          transition: 0.3s;
          text-align: left;
+
+         
         }
 
 
@@ -157,18 +162,20 @@
               .sidenav a {font-size: 18px;}
         
         }
-        .bignumbers
-        {
-        font-size: x-large;
-        
-        }
-       
-  
-        .inbox_text
-        {
-            font-size: larger;
-        }
 
+
+       
+
+  
+
+  .logo img
+    {
+     position:absolute;
+     margin-top: -53px;
+     margin-left: 70px;
+     
+    }
+    
     </style>
   <!-- END OF CSS HERE -->
 
@@ -189,39 +196,7 @@ function openNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
 
-    class product 
-    {
-        constructor( name, description, price, image )
-        {
-            this.image=image;
-            this.name=name;
-            this.description= description;
-            this.price=price; 
-        }
-    }
-    class user
-    {
-        constructor( name, username,password, email, address,phone_number)
-        {
-            this.email=email;
-            this.name=name;
-            this.username=username;
-            this.password=password;
-            this.address=address;
-            this.phone_number=phone_number;
-        }
-    }
-     //--trying users 
 
-    let i = new user("bassem mohamed moustafa","jump","jump18","jump@gmail.com","nasr city", "01555076499");
-    let x = new user("abdelrahman mansy","mansy22","lololo","aloooo@gmail.com","rehab city", "01000076499");
-    let users=[i,x];
-    // trying product;
-    
-    let j= new product("pepsi can","pepsi can betetshereb ya m3alaem te3melak dema8 tarsh ",10,"C:\web project files\pepsi can.jpg");
-    let b= new product("real madrid t-shirt"," tshirt 3amy w 3am 3eyaly ",1500,"‪C:\web project files\real madrid tshirt.jpg");
-
-    let products=[j,b];
 
   
 </script>
@@ -233,6 +208,10 @@ function openNav() {
 
    
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <ul>
+      <div class="logo"><a href="#"><img src = "C:\Users\abdow\Downloads\LogoIHF.png"></a></div>
+      
+  </ul>
         <li>
             <div id="mySidenav" class="sidenav">
             
@@ -245,9 +224,7 @@ function openNav() {
            
             </div>
         </li>
-       
 
-        
           <div class="dashboard">
            <span class="rectangle"><h3>Total Sales</h3>
           <p>989 Items </p> <span class="green-arrow">&#x25B2;</span> +4 Items </span>  
@@ -257,7 +234,7 @@ function openNav() {
               <p>14228 $  </p> <span class="green-arrow">&#x25B2;</span> +63 $ </span>
               <span class="rectangle"><h3>Number of Visitors Today</h3>
                 <p>36 </p> </span>
-                <span class="rectangle2"><h3>Top Selling Products</h3>
+                <span class="rectangle"><h3>Top Selling Products</h3>
                   <span> <span class="green-arrow">&#x25B2;</span> +7 <p=style  font-size="20">Product A </p>
 
                     <span class="green-arrow">&#x25B2;</span> +6 <p=style font-size="20">Product B</p>

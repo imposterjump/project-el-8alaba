@@ -5,161 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard_product.css">
     <title>Document</title>
 
 
 
-    <script>
-        class product {
 
-            constructor(name, categ, description, price, image, sales = 0) {
-                this.image = image;
-                this.name = name;
-                this.categ = categ;
-                this.description = description;
-                this.price = price;
-                this.sales = sales;
-            }
-        }
-
-
-
-        let j = new product("pepsi can", "tops", "pepsi can betetshereb ya m3alaem te3melak dema8 tarsh ", 10, "C:\web project files\pepsi can.jpg");
-        let b = new product("real madrid t-shirt", " tshirt 3amy w 3am 3eyaly ", 1500, "‪C:\web project files\real madrid tshirt.jpg");
-        let categories = ["tops", "bottoms", "accessories", "jackets"];
-
-        function generate_everything() {
-            generate_categories();
-        }
-
-        function generate_categories() {
-            let y = 0;
-            var x = document.getElementById('select_cat');
-            while (y >= 0 && y < categories.length) {
-
-                var option = document.createElement("option");
-                option.text = categories[y];
-                x.add(option, y);
-                y++;
-            }
-        }
-
-        function search(s) {
-            generate_product(s);
-        }
-
-        function generate_product(item_name) {
-            let sname = new String(item_name);
-
-
-
-        }
-    </script>
+    <script src="dashboard_product.js"></script>
 
 
 
 
 
 
-    <style>
-        .mybody {
-            text-align: center;
-            background-color: lightgrey;
-            margin: 20px;
-            padding: 20px;
-        }
-        
-        .inputs {
-            width: 80%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        
-        .submit {
-            width: 50%;
-            margin-left: 25%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-        
-        .add-product {
-            margin-top: 30px;
-            display: block;
-            margin-left: 25%;
-            width: 50%;
-            height: fit-content;
-            display: block;
-            text-align: center;
-            border-radius: 10px;
-            background-color: white;
-        }
-        
-        .searchbar_div {
-            width: 50%;
-            height: fit-content;
-            margin-left: 25%;
-            margin-right: 25%;
-        }
-    </style>
+
 
 
 </head>
 
 
 <body class="mybody">
-    <script>
-        generate_everything();
-    </script>
-    <h1> Products list </h1>
 
 
+
+    <h1> welcome to Products Management Tool </h1>
     <div class="searchbar_div">
-        <input type="text" placeholder="search by item name..... ">
-        <button class="buttons" onclick="product_search()"> Search </button>
+
+        <input type="text" class="inputs " id="search_target" placeholder="search by item name..... ">
+        <button class="buttons " onclick="search() "> Search </button>
 
     </div>
 
-    <div class="product-container" id="product-diplay">
+    <div class="product-container" id="productdisplay">
 
-
-
-
+        <div> ay 7aga</div>
 
     </div>
 
-    <div class="add-product">
+    <div class="add-product ">
         <br>
         <h1> to add a product pls fill the form and submit</h1>
-        <form action="">
+        <form action class="myform ">
 
-            <select name="categoriess" id="select_cat">choose categories</select>
+            <span class="text "> please choose the product type </span>
+
+            <select name="categoriess " id="select_cat ">
+
+                <option value="1 "> tops </option>
+                <option value="2 "> accessories </option>
+                <option value="3 "> jackets </option>
+                <option value="4 "> bottoms </option>
+
+            </select>
             <br>
-            <input type="text" class="inputs" placeholder=" ITEM NAME " required>
+            <input type="text " class="inputs " placeholder=" ITEM NAME " required>
             <br>
-            <input type="text" class="inputs" placeholder=" ITEM DESCRIPTION " required>
+            <input type="text " class="inputs " placeholder=" ITEM DESCRIPTION " required>
             <br>
-            <input type="text" class="inputs" placeholder=" ITEM PRICE " pattern="[0-9]{10}" required>
+            <input type="text " class="inputs " placeholder=" ITEM PRICE " pattern="[0-9]{10} " required>
             <br>
-            <input type="image" class="inputs" placeholder="drop the image here" pattern="[0-9]{10}" required>
             <br>
-            <input type="submit" class="submit" value="ADD PRODUCT ">
+            <span class="text "> enter your product image </span><input type="file" class="image_sub" accept="image/png,image/jpeg">
+            <br>
+            <br>
+            <input type="submit " class="submit " value=" ADD PRODUCT ">
         </form>
 
 
     </div>
+    <script>
+        generate_product(0);
+    </script>
 
 
 
