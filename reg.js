@@ -10,3 +10,11 @@ document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault();
     }
 });
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
