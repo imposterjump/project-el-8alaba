@@ -1,4 +1,4 @@
-<script>
+
                 function openNav() {
                         document.getElementById("mySidenav").style.width = "250px";
                       }
@@ -130,4 +130,3 @@ var myChart2 = new Chart(ctx2, {
 });
 
 
-  </script>

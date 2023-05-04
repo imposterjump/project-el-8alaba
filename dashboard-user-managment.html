@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<body style="background-color:#f7e7ce;"></body>
 <!--HEADER STARTS HERE -->
 
 <head>
@@ -8,42 +9,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard_user.css">
-    <title>Document</title>
-
-
-
-
-    <!--CSS STARTS HERE -->
-
-    <!--CSS ENDSHERE -->
-
-
-
-
-
-
-
-    <!--JS STARTS HERE -->
-    <script src="dashboard_user.js"></script>
-    <!-- JS ENDS  HERE -->
-
+    <title>User management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<!--HEADER ENDS HERE -->
+<script src="dashboard_user.js"></script>
 
+<body>
 
+    <ul>
+        <div class="logo"><a href="#"><img src = "C:\Users\Yahia Eissa\Documents\GitHub\project-el-8alaba\Images\LOGOIHF.png"></a></div>
+        <span style="margin-left:15px;font-size:40px;cursor:pointer;color:white;" onclick="openNav()">&#9776; </span>
+        
+          <li>
+              <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="dashboard-home.html">Home</a>
+              <a href="dashboard-user-managment.html">User Management</a>
+              <a href="dasgboard-product-management.html">Product management</a>
+              <a href="Analytics.html">Analytics</a>
+              <a href="#">Sign out</a>
+            
+          </li>
+      
+          
+        </ul>
 
-
-
-
-
-<!--BODY STARTS HERE -->
-
-<body class="mybody">
-
-
-
-
-    <h1>welcome to users management tool </h1>
+    <h1 class="title">welcome to users management tool </h1>
     <br>
     <div class="searchbar_div">
         <input type="text" class="searchbar" id="search_bar_users" placeholder="Search for a user with username..">

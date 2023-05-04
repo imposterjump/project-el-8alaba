@@ -1,3 +1,7 @@
+html,body{
+  margin: 0;
+}
+
 .tabs-container {
     font-family: "Roboto", sans-serif;
     max-width: 1400px;
