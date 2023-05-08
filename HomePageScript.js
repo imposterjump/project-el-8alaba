@@ -1,16 +1,31 @@
-let myIndex = 0;
-    function slides()
+let myIndexleft = 0;
+    function slidesleft()
     {
-        let images = document.getElementsByClassName("mySlides");
-        for(let i = 0; i < images.length;i++){
-            images[i].style.display = "none";
+        let imagesleft = document.getElementsByClassName("mySlidesleft");
+        for(let i = 0; i < imagesleft.length;i++){
+            imagesleft[i].style.display = "none";
         }
-        if (myIndex > images.length-1){
-            myIndex = 0;
+        if (myIndexleft > imagesleft.length-1){
+            myIndexleft = 0;
         }
-        images[myIndex].style.display = "block";
-        myIndex++;
-        setTimeout(slides,4000);
+        imagesleft[myIndexleft].style.display = "block";
+        myIndexleft++;
+        setTimeout(slidesleft,500);
+    }
+
+    let myIndexright = 0;
+    function slidesright()
+    {
+        let imagesright = document.getElementsByClassName("mySlidesright");
+        for(let i = 0; i < imagesright.length;i++){
+            imagesright[i].style.display = "none";
+        }
+        if (myIndexright > imagesright.length-1){
+            myIndexright = 0;
+        }
+        imagesright[myIndexright].style.display = "block";
+        myIndexright++;
+        setTimeout(slidesright,4000);
     }
 
     function openNav() {
@@ -20,3 +35,13 @@ let myIndex = 0;
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
+
+      // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
