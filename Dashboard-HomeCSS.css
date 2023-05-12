@@ -1,4 +1,72 @@
                
+ .chart-container {
+  width: 40%;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+/* Style the chart title */
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the chart bars */
+.chart-bar {
+  width: calc(100% - 100px);
+  height: 20px;
+  background-color: #007bff;
+  margin-bottom: 10px;
+  position: relative;
+}              
+.chart-bar::before {
+  content: attr(data-value);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+}
+
+/* Set the data values for each bar */
+.chart-bar:nth-child(1) {
+  width: calc(10% * 10);
+}
+
+.chart-bar:nth-child(2) {
+  width: calc(10% * 8);
+}
+
+.chart-bar:nth-child(3) {
+  width: calc(10% * 6);
+}
+
+.chart-bar:nth-child(4) {
+  width: calc(10% * 4);
+}
+
+.chart-bar:nth-child(5) {
+  width: calc(10% * 2);
+}
+
+.chart-bar:nth-child(6) {
+  width: calc(10% * 4);
+}
+
+.chart-bar:nth-child(7) {
+  width: calc(10% * 6);
+}
+
+.chart-bar:nth-child(8) {
+  width: calc(10% * 8);
+}
+
+
 .green-arrow {
     color: green;
     margin-left: 5px;
