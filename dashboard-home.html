@@ -2,7 +2,7 @@
 <html lang="en">
   <body style="background-color:#fff4d9;"></body>
 <head>
-
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,53 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="Dashboard-HomeCSS.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+ 
+    
 </head>
-<script src="Dashboard-homeJS.js"></script>
+
+
 <body class="mybody" >
 
    
   <ul>
-    <div class="logo"><a href="#"><img src = "C:\Users\Yahia Eissa\Documents\GitHub\project-el-8alaba\Images\LOGOIHF.png"></a></div>
+    <div class="logo"><a href="#"><img src = ></a></div>
     <span style="margin-left:15px;font-size:40px;cursor:pointer;color:white;" onclick="openNav()">&#9776; </span>
     
-    <li>
+   
+   <li>
       <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="dashboard-home.html">Home</a>
       <a href="dashboard-user-managment.html">User Management</a>
-      <a href="dasgboard-product-management.html">Product management</a>
+      <a href="dashboard-product-management.html">Product management</a>
       <a href="#">Sign out</a>
     
   </li>
-  
-      
-  </ul>
-        <li>
-            <div id="mySidenav" class="sidenav">
-            
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">HOME</a>
-            <a href="#">USERS MANAGMENT</a>
-            <a href="#">PRODUCT CONTROL</a>
-            <a href="#">SIGN OUT</a>
-           
-            </div>
-        </li>
     </ul>
    
     
   
     <div class="dashboard">
-           
+      
       <div class="top">
         
         <span class="rectangle2" >
           <h4>Revenue</h4>
-          <div id="mypiechart">
-          </div><p>14228 $  </p> <span class="green-arrow"><p3> &#x25B2 </p3></span><p2> +63 $ </p2></span>
+          <canvas id="donutChart"></canvas>
+          <p>14228 $  </p> <span class="green-arrow"><p3> &#x25B2 </p3></span><p2> +63 $ </p2></span>
         
         <span class="rectangle2"><h3>Number of Visitors Today</h3>
-          <p1>36 </p1> </span>
+           <p1>36 </p1> </span>
+
       </div>
 
    
@@ -80,7 +73,7 @@
           </div>
       </div>
     </div>   
-  </div>
+  
 
    
      
@@ -95,7 +88,7 @@
 
 
 
-    
+    <script src="Dashboard-homeJS.js"></script>
 </body>
 
 

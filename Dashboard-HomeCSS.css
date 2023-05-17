@@ -108,9 +108,7 @@
   margin-top: 0;
   margin-bottom: 10px;
 }
-.rectangle2 #mypiechart{
-  margin-left: auto;
-}
+
 .rectangle2 { 
         width: 650px; 
         height: 300px;
@@ -122,17 +120,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border-radius: 10px;
-       
-        #mypiechart{
-        width: 200px; 
-        height: 200px;
-        margin-top: -30px;
-          border-radius: 50%;
-          background: conic-gradient( orange 10%,blue 90%);
-margin-left: 400px;
-       }
+        border-radius: 10px;   
 }
+#donutChart {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-right: 50px;
+  display: block;
+}
+
 .rectangle2 h3{
   
   font-size: 28px;
@@ -148,7 +146,7 @@ margin-left: 400px;
  
 }
 .rectangle2 p{
-  margin-top: -130px;
+  margin-top: -100px;
   margin-left: -440px;
   font-size: 29px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
