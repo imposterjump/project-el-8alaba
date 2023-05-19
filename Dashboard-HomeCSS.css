@@ -57,18 +57,40 @@
 
 .green-arrow {
     color: green;
-    margin-left: 5px;
+    margin-left: -430px;
+    position: sticky;
+    font-size: 30px;
+    margin-top: -20px
+  }
+  .green-arrow2 {
+    color: green;
+    margin-left: 450px;
     position: sticky;
     font-size: 30px;
     margin-top: 20px
   }
-  .green-arrow2 {
+  .green-arrow3 {
     color: green;
-    margin-left: 5px;
-    position: sticky;
+    margin-left: 80px;
+    position: absolute;
     font-size: 30px;
-    margin-top: 50px
+    margin-top: 80px
   }
+  .green-arrow4 {
+    color: green;
+    margin-left: 80px;
+    position: absolute;
+    font-size: 30px;
+    margin-top: 80px
+  }
+  .green-arrow5 {
+    color: green;
+    margin-left: 80px;
+    position: absolute;
+    font-size: 30px;
+    margin-top:80px
+  }
+ 
   .red-arrow{
     color: red;
     margin-left:5px;
@@ -103,7 +125,7 @@
        .rectangle {
         width: 320px; 
         height: 210px;
-        background-color: white;
+        background-color: #fff4d9;";
         text-align: center;
        justify-content: center;
         font-size: large;
@@ -117,19 +139,19 @@
 }
 .rectangle h3{
   font-size: 28px;
-  margin-top: -100;
+  margin-top: -40px;
   margin-bottom: 10px;
 }
 .rectangle p2{
-  margin-top: 90px;
+  margin-top: -20px;
   margin-left: 0px;
-  font-size: 28px;
+  font-size: 21px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .rectangle2 { 
         width: 650px; 
         height: 300px;
-        background-color: rgb(255, 255, 255);
+        background-color: #fff4d9;";
         text-align: center;
         border: 1px solid black;
         font-size: larger;
@@ -143,53 +165,58 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  margin-top: -50px;
-  margin-right: 50px;
+  margin-top: -25px;
+  margin-right: 220px;
   display: block;
 }
 #donutChart2 {
   width: 200px;
   height: 200px;
   margin: 0 auto;
-margin-top: -40px;
-margin-left: 0px;
+margin-top: -15px;
+margin-left: 230px;
   display: block;
 }
 .rectangle2 h3{
   
   font-size: 28px;
-  margin-top: 30px;
-  margin-left: 100px;
+  margin-top: 14px;
+  margin-left: 0px;
  
 }
 .rectangle2 h4{
   
   font-size: 28px;
-  margin-top: 30px;
-  margin-right: 100px;
+  margin-top: 14px;
+  margin-right: 0px;
  
 }
 .rectangle2 p{
   margin-top: -100px;
-  margin-left: -440px;
+  margin-left: 440px;
   font-size: 29px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .rectangle2 p1{
   margin-top: -100px;
-  margin-left: 440px;
+  margin-left: -440px;
   font-size: 28px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .rectangle2 p2{
-  margin-top: -80px;
-  margin-left: 0px;
+  margin-top: -140px;
+  margin-left: -440px;
   font-size: 28px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
 }
-
+ p6{
+  margin-top: -140px;
+  margin-left: 440px;
+  font-size: 28px;
+  
+}
 .rectangle2 p4{
   margin-top: -50px;
   margin-left: 0px;
@@ -205,7 +232,7 @@ margin-left: 0px;
 .rectangle3{
   width: 1320px; 
   height: 210px;
-  background-color: white;
+  background-color: #fff4d9;";
   text-align: center;
   font-size: large;
   border: 1px solid black;
